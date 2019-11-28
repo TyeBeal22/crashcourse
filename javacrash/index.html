@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bar-container"> 
+        <div class = "bar" />
+    </div>
+
+    <button onclick = 'fillBar(2)'>Start</button>
+    <script>
+        function fillBar(seconds){
+            console.log('clicked');
+            const bar = document.querySelector('.bar');
+            let atPercent = 0;
+            const interval = setInterval(() => {
+                bar.style.width = atPercent + '%';
+                atPercent++;
+                if (atPercent >= 100){
+                    clearInterval(interval);
+                }
+            }, (seconds * 1000) / 100)
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+        .bar-container {
+    width: 200px;
+    height: 30px;
+    margin: '40px';
+    background-color: grey;
+        }
+        .bar {
+            background-color: green;
+            height: 100%;
+            width: 0%;
+        }
+    </style>
+
+<script>
+    let students = [
+    {
+        "name": "Tye",
+        "age": 30,
+        "height": 170
+    },
+    {
+        "name": "Jake",
+        "age": 40,
+        "height": 180
+    }
+]
+
+console.log(JSON.parse(students));
+
+</script>
+ <script src="crash.js">
+    
+</script>
+</body>
+</html>
