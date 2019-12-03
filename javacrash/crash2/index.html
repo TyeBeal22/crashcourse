@@ -1,67 +1,55 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div class="bar-container"> 
-        <div class = "bar" />
-    </div>
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Java stuff</title>
+     <!-- Squarespace. --><!-- grindergifts -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="project.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body>
 
-    <button onclick = 'fillBar(2)'>Start</button>
-    <script>
-        function fillBar(seconds){
-            console.log('clicked');
-            const bar = document.querySelector('.bar');
-            let atPercent = 0;
-            const interval = setInterval(() => {
-                bar.style.width = atPercent + '%';
-                atPercent++;
-                if (atPercent >= 100){
-                    clearInterval(interval);
-                }
-            }, (seconds * 1000) / 100)
-        }
-    </script>
-
-    <style>
-        body {
-            background-color: lightgrey;
-        }
-        .bar-container {
-    width: 200px;
-    height: 30px;
-    margin: '40px';
-    background-color: grey;
-        }
-        .bar {
-            background-color: green;
-            height: 100%;
-            width: 0%;
-        }
-    </style>
-
-<script>
-    let students = [
-    {
-        "name": "Tye",
-        "age": 30,
-        "height": 170
-    },
-    {
-        "name": "Jake",
-        "age": 40,
-        "height": 180
-    }
-]
-
-console.log(JSON.parse(students));
-
-</script>
- <script src="crash.js">
     
-</script>
-</body>
+      <div class="container-1">
+        <h2><b>Your Age in Days</b></h2>
+        <div class="flex-box-container-1">
+
+    <div>
+      <button class="btn btn-primary" onclick="ageInDays()">Click Me</button>
+    </div>
+    <div>
+      <button class="btn btn-danger" onclick="reset()"> Reset </button>
+    </div>
+  </div>
+  <div class="flex-box-container-1">
+    <div id="flex-box-result" id = "flex-cat"></div>
+  </div>
+</div>
+
+      <div class="container-2">
+        <h2>Bow Tye</h2>
+        <button class ="btn btn-success" id="cat-gen" onclick="generateCat()">BowButton</button>
+        <button class="btn btn-danger" onclick="reset1()"> Remove</button>
+      <div class="flex-box-container-2" id="flex-cat">
+      </div>
+      </div>
+      <div class="container-3">
+        <h2>Rock Paper Scissors</h2>
+        <div class="flex-box-rps" id="flex-box-rps-div">
+          <img id="rock" src="https://images.homedepot-static.com/productImages/930c2484-4b61-4b34-9e86-d8d4858cf565/svn/backyard-x-scapes-fake-rocks-hdd-rof-rocsb-64_400_compressed.jpg" height=150 width= 150 onclick="rpsGame(this)">
+          <img id="scissor" src="https://cdn11.bigcommerce.com/s-ougmtpn5/images/stencil/2048x2048/products/2530/2241/PEACE%20SIGN%20HAND__13648.1384462101.JPG?c=2"  height=150 width= 150 onclick="rpsGame(this)">
+          <img id="longMoney" src="https://www.snopes.com/tachyon/2017/09/money_stack_fb.jpg?resize=865,452" height=150 width= 150 onclick="rpsGame(this)">
+        </div>
+      </div>
+        <p class="light"> © 2019 Grinder Gifts</p>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="project.js"> </script>
+
+  </body>
 </html>
